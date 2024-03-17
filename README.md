@@ -75,5 +75,26 @@ The presence of a file extension in the URL (czx.jpg) suggests that the server m
 These GET requests provide insights into the behavior of the RedLine Stealer malware, including its attempt to start, install, and fetch additional resources from remote servers. Analyzing such network traffic helps security analysts understand the malware's tactics and devise appropriate countermeasures to mitigate the threat.
 
 
+<b>Additional filters</b> 
+
+We can filter out specific protocols using, TCP, DNS, LDAP etc 
+<img src="https://imgur.com/RTjAClL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+
+
+
+We can also filter via ports, HTTPS via port 443 using the following input tcp.port == 443, HHPT using the followng input, tcp.port == 80
+<img src="https://imgur.com/KqAmc3o.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+
+
+
+Filter using specific source or destination IP address using ip.src == 172.253.62.106 or ip.dst == 52.108.8.254 This allows you to analyse traffic directed to that specific address. 
+<img src="https://imgur.com/qGweLwJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+
 
 
