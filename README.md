@@ -5,10 +5,15 @@ RedLine Stealer is information-stealing malware that harvests login credentials 
 
 <h2> Aims </h2>
 <b>1. What is the date and time in UTC the infection started?</b> 
+
 <b>2. What is the IP address of the infected Windows client?</b> 
+
 <b>3. What is the MAC address of the infected Windows client?</b> 
+
 <b>4. What is the hostname of the infected Windows client?</b> 
+
 <b>5. What is the user account name from the infected Windows host?</b> 
+
 <b>6. What insights can be gained from analyzing the HTTP GET requests made by the RedLine Stealer malware, and how do these requests indicate the malware's behavior and potential actions on the infected system?</b> 
 
 <h2>Languages and Utilities Used</h2>
