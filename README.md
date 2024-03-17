@@ -30,23 +30,25 @@ Applying the basic web filter reveals a single internal IP address at 10.7.10[.
 </p>
 
 
-
+<p align="center">
 NBNS is a protocol used to resolve NetBIOS names to IP addresses, primarily in Windows networks. From figure 2 below we can see the hostname is DESKTOP-9PEA63H. It is not COOLWEATHERCOAT as it is the domain name rather than the specific host name.
 
 <img src="https://imgur.com/gbjgIUx.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 
-
+<p align="center">
 We can verify the victim’s hostname and Windows user account name through Kerberos authentication traffic. Filter on kerberos.CNameString to find the Windows user account name rwalters, as shown below in Figure 3. 
 
 <img src="https://imgur.com/2AQN9ld.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 
+<p align="center">
 
 The HTTP GET requests captured in the Wireshark traffic reveal important information about the RedLine Stealer infection. Let's break down what these GET requests show and mean:
 
+<p align="center">
 http://623start[.]site/?status=start&av=Windows%20Defender
 If we follow the TCP stream, this GET request indicates the malware attempting to start its malicious activities. The status=start parameter likely triggers the malware to initiate its operations. The av=Windows%20Defender parameter suggests that the malware is checking for the presence of Windows Defender antivirus on the victim's system.
 
@@ -54,7 +56,7 @@ If we follow the TCP stream, this GET request indicates the malware attempting t
 </p>
 
 
-
+<p align="center">
 http://623start[.]site/?status=install
 This GET request signifies another stage in the malware's execution. The status=install parameter could imply that the malware is attempting to install additional components or perform certain actions on the infected system.
 
@@ -62,7 +64,7 @@ This GET request signifies another stage in the malware's execution. The status=
 </p>
 
 
-
+<p align="center">
 http://guiatelefonos[.]com/data/czx.jpg
 This GET request points to a URL where the malware attempts to fetch additional resources or execute further commands. In this case, it's requesting a JPEG file.
 The presence of a file extension in the URL (czx.jpg) suggests that the server may respond with a file download, potentially containing malicious code or instructions.
@@ -71,26 +73,27 @@ The presence of a file extension in the URL (czx.jpg) suggests that the server m
 </p>
 
 
-
+<p align="center">
 These GET requests provide insights into the behavior of the RedLine Stealer malware, including its attempt to start, install, and fetch additional resources from remote servers. Analyzing such network traffic helps security analysts understand the malware's tactics and devise appropriate countermeasures to mitigate the threat.
 </p>
 
+<p align="center">
 <b>Additional filters</b> 
 
+<p align="center">
 We can filter out specific protocols using, TCP, DNS, LDAP etc 
 <img src="https://imgur.com/RTjAClL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 
 
-
+<p align="center">
 We can also filter via ports, HTTPS via port 443 using the following input tcp.port == 443, HHPT using the followng input, tcp.port == 80
 <img src="https://imgur.com/KqAmc3o.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 
-
-
+<p align="center">
 Filter using specific source or destination IP address using ip.src == 172.253.62.106 or ip.dst == 52.108.8.254 This allows you to analyse traffic directed to that specific address. 
 <img src="https://imgur.com/qGweLwJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
