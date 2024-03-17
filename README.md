@@ -4,17 +4,18 @@
 RedLine Stealer is information-stealing malware that harvests login credentials and other sensitive data from a victim's Windows host. This Wireshark project uses a packet capture (pcap) that “crosses a line” separating normal traffic from malicious activity. The malicious activity in this pcap is a RedLine Stealer infection from July 2023. The pcap provides experience analyzing RedLine traffic, and we can determine what specific data was stolen from an infected Windows computer.
 
 <h2> Aims </h2>
-<b>1. What is the date and time in UTC the infection started?</b> 
 
-<b>2. What is the IP address of the infected Windows client?</b> 
+1. What is the date and time in UTC the infection started?</b> 
 
-<b>3. What is the MAC address of the infected Windows client?</b> 
+2. What is the IP address of the infected Windows client?</b> 
 
-<b>4. What is the hostname of the infected Windows client?</b> 
+3. What is the MAC address of the infected Windows client?</b> 
 
-<b>5. What is the user account name from the infected Windows host?</b> 
+4. What is the hostname of the infected Windows client?</b> 
 
-<b>6. What insights can be gained from analyzing the HTTP GET requests made by the RedLine Stealer malware, and how do these requests indicate the malware's behavior and potential actions on the infected system?</b> 
+5. What is the user account name from the infected Windows host?</b> 
+
+6. What insights can be gained from analyzing the HTTP GET requests made by the RedLine Stealer malware, and how do these requests indicate the malware's behavior and potential actions on the infected system?</b> 
 
 <h2>Languages and Utilities Used</h2>
 - <b>Wireshark</b> 
